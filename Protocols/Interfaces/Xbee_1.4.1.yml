@@ -1,0 +1,2455 @@
+__init__: {}
+comm_interface:
+  XBeeCommunicationInterface:
+  - open
+  - close
+  - is_interface_open
+  - wait_for_frame
+  - quit_reading
+  - write_frame
+  - get_network
+  - get_local_xbee_info
+  - supports_update_firmware
+  - update_firmware
+  - supports_apply_profile
+  - apply_profile
+  - timeout
+  - timeout
+devices:
+  AbstractXBeeDevice:
+  - update_device_data_from
+  - get_parameter
+  - set_parameter
+  - execute_command
+  - _check_at_cmd_response_is_valid
+  - _send_at_command
+  - apply_changes
+  - write_changes
+  - reset
+  - _read_device_info
+  - read_device_info
+  - determine_protocol
+  - is_device_info_complete
+  - _determine_role
+  - get_node_id
+  - set_node_id
+  - get_hardware_version
+  - get_firmware_version
+  - get_protocol
+  - get_16bit_addr
+  - set_16bit_addr
+  - get_64bit_addr
+  - get_role
+  - get_current_frame_id
+  - enable_apply_changes
+  - is_apply_changes_enabled
+  - is_remote
+  - set_sync_ops_timeout
+  - get_sync_ops_timeout
+  - get_dest_address
+  - set_dest_address
+  - get_pan_id
+  - set_pan_id
+  - get_power_level
+  - set_power_level
+  - set_io_configuration
+  - get_io_configuration
+  - get_io_sampling_rate
+  - set_io_sampling_rate
+  - read_io_sample
+  - get_adc_value
+  - set_pwm_duty_cycle
+  - get_pwm_duty_cycle
+  - get_dio_value
+  - set_dio_value
+  - set_dio_change_detection
+  - get_api_output_mode
+  - get_api_output_mode_value
+  - set_api_output_mode
+  - set_api_output_mode_value
+  - enable_bluetooth
+  - disable_bluetooth
+  - _enable_bluetooth
+  - get_bluetooth_mac_addr
+  - update_bluetooth_password
+  - update_bluetooth_salt_verifier
+  - update_firmware
+  - _autodetect_device
+  - apply_profile
+  - get_file_manager
+  - _get_ai_status
+  - _force_disassociate
+  - _get_next_frame_id
+  - _get_operating_mode
+  - _before_send_method
+  - _after_send_method
+  - _get_packet_by_id
+  - _add_packet_received_callback
+  - _del_packet_received_callback
+  - _send_packet_sync_and_get_response
+  - _send_packet
+  - _get_routes
+  - _get_neighbors
+  - reachable
+  - scan_counter
+  - log
+  - br
+  CellularDevice:
+  - open
+  - get_protocol
+  - _read_device_info
+  - is_device_info_complete
+  - is_connected
+  - get_cellular_ai_status
+  - add_sms_callback
+  - del_sms_callback
+  - get_imei_addr
+  - send_sms
+  - send_sms_async
+  - get_sockets_list
+  - get_socket_info
+  - get_64bit_addr
+  - add_io_sample_received_callback
+  - del_io_sample_received_callback
+  - set_dio_change_detection
+  - get_io_sampling_rate
+  - set_io_sampling_rate
+  - get_node_id
+  - set_node_id
+  - get_power_level
+  - set_power_level
+  Connection:
+  - node_a
+  - node_b
+  - lq_a2b
+  - lq_a2b
+  - lq_b2a
+  - lq_b2a
+  - status_a2b
+  - status_a2b
+  - status_b2a
+  - status_b2a
+  - scan_counter_a2b
+  - scan_counter_a2b
+  - scan_counter_b2a
+  - scan_counter_b2a
+  DigiMeshDevice:
+  - open
+  - get_protocol
+  - _init_network
+  - build_aggregate_routes
+  - send_data_64
+  - send_data_async_64
+  - read_expl_data
+  - read_expl_data_from
+  - send_expl_data
+  - send_expl_data_broadcast
+  - send_expl_data_async
+  - get_neighbors
+  DigiMeshNetwork:
+  - _calculate_timeout
+  - _prepare_network_discovery
+  - _discover_neighbors
+  - _check_not_discovered_nodes
+  - _discovery_done
+  - _restore_network
+  DigiPointDevice:
+  - open
+  - get_protocol
+  - _init_network
+  - send_data_64_16
+  - send_data_async_64_16
+  - read_expl_data
+  - read_expl_data_from
+  - send_expl_data
+  - send_expl_data_broadcast
+  - send_expl_data_async
+  DigiPointNetwork: []
+  IPDevice:
+  - _read_device_info
+  - is_device_info_complete
+  - get_ip_addr
+  - set_dest_ip_addr
+  - get_dest_ip_addr
+  - add_ip_data_received_callback
+  - del_ip_data_received_callback
+  - start_listening
+  - stop_listening
+  - send_ip_data
+  - send_ip_data_async
+  - send_ip_data_broadcast
+  - read_ip_data
+  - read_ip_data_from
+  - get_network
+  - _init_network
+  - get_16bit_addr
+  - get_dest_address
+  - set_dest_address
+  - get_pan_id
+  - set_pan_id
+  - add_data_received_callback
+  - del_data_received_callback
+  - add_expl_data_received_callback
+  - del_expl_data_received_callback
+  - read_data
+  - read_data_from
+  - send_data_broadcast
+  - send_data
+  - send_data_async
+  LPWANDevice:
+  - send_ip_data
+  - send_ip_data_async
+  - add_sms_callback
+  - del_sms_callback
+  - send_sms
+  - send_sms_async
+  LinkQuality:
+  - lq
+  - is_rssi
+  NBIoTDevice:
+  - open
+  - get_protocol
+  NetworkEventReason:
+  - code
+  - description
+  - get
+  NetworkEventType:
+  - code
+  - description
+  - get
+  Raw802Device:
+  - open
+  - get_protocol
+  - _init_network
+  - get_ai_status
+  - send_data_64
+  - send_data_async_64
+  - send_data_16
+  - send_data_async_16
+  Raw802Network:
+  - _calculate_timeout
+  RemoteDigiMeshDevice:
+  - get_protocol
+  - get_neighbors
+  RemoteDigiPointDevice:
+  - get_protocol
+  RemoteRaw802Device:
+  - get_protocol
+  - set_64bit_addr
+  - get_ai_status
+  RemoteXBeeDevice:
+  - get_parameter
+  - set_parameter
+  - is_remote
+  - reset
+  - get_local_xbee_device
+  - set_local_xbee_device
+  - get_serial_port
+  - get_comm_iface
+  - get_ota_max_block_size
+  - set_ota_max_block_size
+  - update_filesystem_image
+  RemoteZigBeeDevice:
+  - parent
+  - parent
+  - get_protocol
+  - _read_device_info
+  - is_device_info_complete
+  - get_ai_status
+  - force_disassociate
+  - get_routes
+  - get_neighbors
+  WiFiDevice:
+  - open
+  - get_protocol
+  - get_wifi_ai_status
+  - get_access_point
+  - scan_access_points
+  - connect_by_ap
+  - connect_by_ssid
+  - disconnect
+  - is_connected
+  - get_access_point_timeout
+  - set_access_point_timeout
+  - get_ip_addressing_mode
+  - set_ip_addressing_mode
+  - set_ip_address
+  - get_mask_address
+  - set_mask_address
+  - get_gateway_address
+  - set_gateway_address
+  - get_dns_address
+  - set_dns_address
+  XBeeDevice:
+  - create_xbee_device
+  - open
+  - _do_open
+  - close
+  - serial_port
+  - comm_iface
+  - operating_mode
+  - get_parameter
+  - set_parameter
+  - _send_data_64_16
+  - _send_data_64
+  - _send_data_16
+  - send_data
+  - _send_data_async_64_16
+  - _send_data_async_64
+  - _send_data_async_16
+  - send_data_async
+  - send_data_broadcast
+  - send_user_data_relay
+  - send_bluetooth_data
+  - send_micropython_data
+  - read_data
+  - read_data_from
+  - has_packets
+  - has_explicit_packets
+  - flush_queues
+  - reset
+  - add_packet_received_callback
+  - add_data_received_callback
+  - add_modem_status_received_callback
+  - add_io_sample_received_callback
+  - add_expl_data_received_callback
+  - add_user_data_relay_received_callback
+  - add_bluetooth_data_received_callback
+  - add_micropython_data_received_callback
+  - add_socket_state_received_callback
+  - add_socket_data_received_callback
+  - add_socket_data_received_from_callback
+  - add_fs_frame_received_callback
+  - del_packet_received_callback
+  - del_data_received_callback
+  - del_modem_status_received_callback
+  - del_io_sample_received_callback
+  - del_expl_data_received_callback
+  - del_user_data_relay_received_callback
+  - del_bluetooth_data_received_callback
+  - del_micropython_data_received_callback
+  - del_socket_state_received_callback
+  - del_socket_data_received_callback
+  - del_socket_data_received_from_callback
+  - del_fs_frame_received_callback
+  - get_xbee_device_callbacks
+  - is_open
+  - is_remote
+  - get_network
+  - _restart_packet_listener
+  - _init_network
+  - _send_expl_data
+  - _send_expl_data_async
+  - _send_expl_data_broadcast
+  - _read_expl_data
+  - _read_expl_data_from
+  - _enter_at_command_mode
+  - _exit_at_command_mode
+  - _determine_operating_mode
+  - send_packet_sync_and_get_response
+  - send_packet
+  - get_next_frame_id
+  - add_route_received_callback
+  - del_route_received_callback
+  - get_route_to_node
+  XBeeNetwork:
+  - scan_counter
+  - start_discovery_process
+  - stop_discovery_process
+  - discover_device
+  - discover_devices
+  - is_discovery_running
+  - get_devices
+  - has_devices
+  - get_number_devices
+  - export
+  - update_nodes
+  - add_network_modified_callback
+  - add_device_discovered_callback
+  - add_init_discovery_scan_callback
+  - add_end_discovery_scan_callback
+  - add_discovery_process_finished_callback
+  - add_packet_received_from_callback
+  - add_update_progress_callback
+  - del_network_modified_callback
+  - del_device_discovered_callback
+  - del_init_discovery_scan_callback
+  - del_end_discovery_scan_callback
+  - del_discovery_process_finished_callback
+  - del_packet_received_from_callback
+  - del_update_progress_callback
+  - get_update_progress_callbacks
+  - clear
+  - _clear
+  - get_discovery_options
+  - set_discovery_options
+  - get_deep_discovery_options
+  - set_deep_discovery_options
+  - get_discovery_timeout
+  - set_discovery_timeout
+  - get_deep_discovery_timeouts
+  - set_deep_discovery_timeouts
+  - get_nt_limits
+  - is_node_in_network
+  - get_device_by_64
+  - get_device_by_16
+  - get_device_by_node_id
+  - add_if_not_exist
+  - add_remote
+  - _add_remote
+  - _add_remote_from_attr
+  - add_remotes
+  - _remove_device
+  - remove_device
+  - get_discovery_callbacks
+  - _get_discovery_thread
+  - _discover_full_network
+  - _prepare_network_discovery
+  - _check_not_discovered_nodes
+  - _discover_neighbors
+  - _node_discovery_process_finished
+  - _handle_special_errors
+  - _discovery_done
+  - _restore_network
+  - _is_802_compatible
+  - _calculate_timeout
+  - _set_node_reachable
+  - get_connections
+  - get_node_connections
+  - _add_connection
+  ZigBeeDevice:
+  - open
+  - get_protocol
+  - _init_network
+  - get_ai_status
+  - force_disassociate
+  - get_many_to_one_broadcasting_time
+  - set_many_to_one_broadcasting_time
+  - send_data_64_16
+  - send_data_async_64_16
+  - read_expl_data
+  - read_expl_data_from
+  - send_expl_data
+  - send_expl_data_broadcast
+  - send_expl_data_async
+  - send_multicast_data
+  - send_multicast_data_async
+  - register_joining_device
+  - register_joining_device_async
+  - unregister_joining_device
+  - unregister_joining_device_async
+  - get_routes
+  - get_neighbors
+  - create_source_route
+  ZigBeeNetwork:
+  - _prepare_network_discovery
+  - _discover_neighbors
+  - _node_discovery_process_finished
+  - _check_not_discovered_nodes
+  - _discovery_done
+  - _restore_network
+  - _handle_special_errors
+exception:
+  ATCommandException: []
+  CommunicationException: []
+  ConnectionException: []
+  FirmwareUpdateException: []
+  InvalidConfigurationException: []
+  InvalidOperatingModeException: []
+  InvalidPacketException: []
+  OperationNotSupportedException: []
+  RecoveryException: []
+  TimeoutException: []
+  TransmitException: []
+  XBeeDeviceException: []
+  XBeeException: []
+  XBeeSocketException: []
+filesystem:
+  FileProcess:
+  - running
+  - status
+  - block_size
+  - _next
+  - _start_process
+  - _end_process
+  - _get_block_size
+  - _get_open_flags
+  - _exec_specific_cmd
+  - _notify_process_finished
+  - _log_str
+  FileSystemElement:
+  - name
+  - path
+  - path
+  - is_dir
+  - size
+  - size_pretty
+  - is_secure
+  - from_data
+  FileSystemException: []
+  FileSystemManager:
+  - xbee
+  - np_value
+  - get_root
+  - make_directory
+  - list_directory
+  - remove
+  - read_file
+  - write_file
+  - get_file
+  - put_file
+  - put_dir
+  - get_file_hash
+  - move
+  - get_volume_info
+  - format
+  - pget_path_id
+  - pmake_directory
+  - plist_directory
+  - premove
+  - popen_file
+  - pclose_file
+  - pread_file
+  - pwrite_file
+  - pget_file_hash
+  - prename
+  - prelease_path_id
+  - _cd_to_execute
+  - _get_np
+  - _get_fit_parent_path
+  - _create_fs_frame
+  - _log_str
+  FileSystemNotSupportedException: []
+  LocalXBeeFileSystemManager:
+  - _read_data
+  - _is_in_atcmd_mode
+  - _enter_atcmd_mode
+  - _exit_atcmd_mode
+  - _check_atcmd_mode
+  - _supports_filesystem
+  - _parse_filesystem_functions
+  - _is_function_supported
+  - _check_function_error
+  - _xmodem_write_cb
+  - _xmodem_read_cb
+  - _execute_command
+  - is_connected
+  - connect
+  - disconnect
+  - get_current_directory
+  - change_directory
+  - make_directory
+  - list_directory
+  - remove_element
+  - move_element
+  - put_file
+  - put_dir
+  - get_file
+  - format_filesystem
+  - get_usage_information
+  - get_file_hash
+  - update_remote_filesystem_image
+  - check_fs_support
+  - get_local_file_hash
+  - _raise_exception
+  - _get_milliseconds
+  - _filter_non_printable
+  _FSFrameSender:
+  - _fs_frame_cb
+  - send
+  - _throw_fs_exc
+  _FilesystemFunction:
+  - get
+  - cmd_name
+  - command
+  _ReadFileProcess:
+  - block_size
+  - next
+  - _get_open_flags
+  - _exec_specific_cmd
+  - _notify_process_finished
+  _WriteFileProcess:
+  - block_size
+  - next
+  - _get_open_flags
+  - _exec_specific_cmd
+  - _notify_process_finished
+firmware:
+  FwUpdateTask:
+  - xbee
+  - xml_path
+  - fw_path
+  - bl_path
+  - timeout
+  - callback
+  - update_local_firmware
+  - update_remote_firmware
+  - update_remote_filesystem
+  - _file_exists
+  - _bootloader_version_to_bytearray
+  - _get_milliseconds
+  - _connect_device_with_retries
+  - _get_parameter_with_retries
+  - _set_parameter_with_retries
+  - _get_bootloader_version
+  - _get_compatibility_number
+  - _get_region_lock
+  - _get_hw_version
+  - _get_fw_version
+  - _reverse_bytearray
+  - _create_serial_port
+  - _read_bootloader_header_generic
+  - _is_bootloader_active_generic
+  - _determine_bootloader_type
+  - _enable_explicit_mode
+  UpdateConfigurer:
+  - sync_sleep
+  - prepare_total
+  - prepare_total
+  - restore_total
+  - restore_total
+  - prepare_for_update
+  - restore_after_update
+  - exec_at_cmd
+  - progress_cb
+  - _is_sync_sleep
+  - _prepare_node_for_update
+  - _prepare_network_for_update
+  - _restore_node_after_update
+  - _restore_network_after_update
+  - _must_wait_for_network
+  - _update_node_info
+  - _wait_for_dm_network_up
+  - _get_min_value
+  _BootloaderType:
+  - get
+  - determine_bootloader_type
+  - identifier
+  - description
+  _BreakThread:
+  - run
+  - stop_break
+  - is_running
+  _EBLFile:
+  - get_next_mem_page
+  - num_pages
+  - page_index
+  - percent
+  _EbinFile:
+  - get_next_mem_page
+  - num_pages
+  - page_index
+  - percent
+  _GPMCmd:
+  - get
+  - identifier
+  - description
+  - command_id
+  - answer_id
+  - execution_error
+  _Gen3BootloaderCmd:
+  - get
+  - identifier
+  - description
+  - command
+  - answer_length
+  - timeout
+  _LinkTest:
+  - _generate_link_test_packet
+  - _link_test_callback
+  - execute_test
+  _LocalFirmwareUpdater:
+  - _notify_progress
+  - _check_fw_binary_file
+  - _enter_bootloader_mode_with_break
+  - _get_target_bootloader_version
+  - _get_target_compatibility_number
+  - _get_target_region_lock
+  - _get_target_hw_version
+  - _get_target_fw_version
+  - _check_updater_compatibility
+  - _connect_local
+  - _configure_updater
+  - _restore_updater
+  - _restore_local_connection
+  - _start_firmware_update
+  - _update_target_information
+  - _will_protocol_change
+  - _set_device_in_programming_mode
+  - _get_default_reset_timeout
+  - _get_bootloader_serial_params
+  - _is_bootloader_active
+  - _get_target_bootloader_version_bootloader
+  - _get_target_compatibility_number_bootloader
+  - _get_target_region_lock_bootloader
+  - _get_target_hw_version_bootloader
+  - _get_fw_binary_file_extension
+  _LocalXBee3FirmwareUpdater:
+  - _is_bootloader_active
+  - _read_bootloader_header
+  - _get_bootloader_serial_params
+  - _get_target_bootloader_version_bootloader
+  - _get_target_compatibility_number_bootloader
+  - _get_target_region_lock_bootloader
+  - _get_target_hw_version_bootloader
+  - _get_fw_binary_file_extension
+  - _check_bootloader_binary_file
+  - _transfer_firmware
+  - _finish_firmware_update
+  - _start_firmware_upload_operation
+  - _run_fw_operation
+  - _xmodem_write_cb
+  - _xmodem_read_cb
+  - _xmodem_progress_cb
+  - _transfer_firmware_file_xmodem
+  _LocalXBeeGEN3FirmwareUpdater:
+  - _is_bootloader_active
+  - _read_bootloader_header
+  - _get_bootloader_serial_params
+  - _get_fw_binary_file_extension
+  - _check_bootloader_binary_file
+  - _execute_bootloader_cmd
+  - _get_target_bootloader_version_bootloader
+  - _get_target_compatibility_number_bootloader
+  - _get_target_region_lock_bootloader
+  - _get_target_hw_version_bootloader
+  - _get_bootloader_protocol_version
+  - _send_change_baudrate_cmd
+  - _send_initialize_cmd
+  - _send_finish_cmd
+  - _send_verify_cmd
+  - _transfer_firmware
+  - _send_memory_page
+  - _calculate_page_verification
+  - _finish_firmware_update
+  _LoopbackTest:
+  - _generate_loopback_packet
+  - _loopback_callback
+  - execute_test
+  _OTAFile:
+  - parse_file
+  - get_next_data_chunk
+  - close_file
+  - file_path
+  - header_version
+  - header_length
+  - header_field_control
+  - manufacturer_code
+  - image_type
+  - file_version
+  - zigbee_stack_version
+  - header_string
+  - total_size
+  - discard_size
+  - ota_size
+  - min_hw_version
+  - max_hw_version
+  _ParsingOTAException: []
+  _RemoteEmberFirmwareUpdater:
+  - _get_default_reset_timeout
+  - _check_fw_binary_file
+  - _check_bootloader_binary_file
+  - _configure_ao_parameter
+  - _configure_updater_extra
+  - _restore_updater_extra
+  - _determine_updater_device_zigbee
+  - _determine_updater_device_digimesh
+  - _determine_updater_device_802
+  - _get_updater_candidates
+  - _is_valid_updater_candidate
+  - _determine_best_updater_from_candidates_list_zigbee
+  - _determine_best_updater_from_candidates_list_digimesh
+  - _clear_updater_recovery_mode
+  - _set_updater_recovery_mode
+  - _set_remote_programming_mode
+  - _ota_callback
+  - _create_ota_explicit_packet
+  - _send_initialization_cmd
+  - _send_firmware
+  - _send_firmware_data
+  - _start_firmware_update
+  - _transfer_firmware
+  - _finish_firmware_update
+  _RemoteFilesystemUpdater:
+  - _parse_xml_firmware_file
+  - _check_fw_binary_file
+  - _will_protocol_change
+  - _check_target_compatibility
+  - _update_target_information
+  _RemoteFirmwareUpdater:
+  - _notify_progress
+  - _get_target_bootloader_version
+  - _get_target_compatibility_number
+  - _get_target_region_lock
+  - _get_target_hw_version
+  - _get_target_fw_version
+  - _connect_local
+  - _configure_updater
+  - _restore_updater
+  - _restore_local_connection
+  - _check_updater_compatibility
+  - _update_target_information
+  - _will_protocol_change
+  - _configure_ao_parameter
+  - _configure_updater_extra
+  - _restore_updater_extra
+  _RemoteGPMFirmwareUpdater:
+  - _get_default_reset_timeout
+  - _check_fw_binary_file
+  - _check_bootloader_binary_file
+  - _configure_ao_parameter
+  - _configure_updater_extra
+  - _restore_updater_extra
+  - _create_explicit_frame
+  - _create_gpm_cmd_frame
+  - _gpm_receive_frame_callback
+  - _send_explicit_gpm_frame
+  - _execute_gpm_cmd
+  - _read_device_gpm_info
+  - _erase_flash
+  - _write_data
+  - _verify_firmware
+  - _install_firmware
+  - _start_firmware_update
+  - _transfer_firmware
+  - _finish_firmware_update
+  _RemoteXBee3FirmwareUpdater:
+  - _check_fw_binary_file
+  - _check_bootloader_binary_file
+  - _configure_ao_parameter
+  - _configure_updater_extra
+  - _restore_updater_extra
+  - _create_explicit_frame
+  - _create_zcl_frame
+  - _calculate_frame_control
+  - _create_image_notify_request_frame
+  - _create_query_next_image_response_frame
+  - _create_image_block_response_frame
+  - _create_upgrade_end_response_frame
+  - _image_request_frame_cb
+  - _fw_receive_frame_cb
+  - _check_img_data
+  - _is_next_img_req_frame
+  - _parse_next_img_req_frame
+  - _is_image_block_request_frame
+  - _parse_image_block_request_frame
+  - _is_upgrade_end_request_frame
+  - _parse_upgrade_end_request_frame
+  - _is_default_response_frame
+  - _parse_default_response_frame
+  - _send_query_next_img_response
+  - _send_ota_block
+  - _check_received_request
+  - _start_firmware_update
+  - _transfer_firmware
+  - _finish_firmware_update
+  - _get_default_reset_timeout
+  - _get_ota_size
+  - _get_ota_offset
+  _TraceRouteTest:
+  - execute_test
+  _XBee3OTAClientDescription:
+  - get_protocol_from_fw
+  - extended_timeout
+  - extended_timeout
+  - must_send_complete_ota
+  - is_ack_immediate
+  - wait_for_client_retry
+  - get_block_response_max_retries
+  - get_max_ota_lost_client_requests_in_a_row
+  - support_ota_fragmentation
+  - support_different_ota_block_size
+  - _get_fw_to_check
+  _XBee3OTAStatus:
+  - get
+  - identifier
+  - description
+  _XBeeFirmwareUpdater:
+  - _notify_progress
+  - _parse_xml_firmware_file
+  - _exit_with_error
+  - _check_target_compatibility
+  - _check_bootloader_update_required
+  - _check_bootloader_reset_settings
+  - _get_default_reset_timeout
+  - _wait_for_target_reset
+  - update_firmware
+  - check_protocol_changed_by_fw
+  - _check_updater_compatibility
+  - _check_fw_binary_file
+  - _check_bootloader_binary_file
+  - _get_target_bootloader_version
+  - _get_target_compatibility_number
+  - _get_target_region_lock
+  - _get_target_hw_version
+  - _get_target_fw_version
+  - _connect_local
+  - _configure_updater
+  - _restore_updater
+  - _restore_local_connection
+  - _start_firmware_update
+  - _transfer_firmware
+  - _finish_firmware_update
+  - _update_target_information
+  - _will_protocol_change
+io:
+  IOLine:
+  - description
+  - index
+  - at_command
+  - pwm_at_command
+  - has_pwm_capability
+  - get
+  IOMode: []
+  IOSample:
+  - min_io_sample_payload
+  - digital_hsb_mask
+  - digital_lsb_mask
+  - digital_mask
+  - digital_values
+  - analog_mask
+  - analog_values
+  - power_supply_value
+  - has_digital_values
+  - has_digital_value
+  - has_analog_value
+  - has_analog_values
+  - has_power_supply_value
+  - get_digital_value
+  - get_analog_value
+  IOValue:
+  - code
+  - get
+models.__init__: {}
+models.accesspoint:
+  AccessPoint:
+  - ssid
+  - encryption_type
+  - channel
+  - channel
+  - signal_quality
+  - signal_quality
+  WiFiEncryptionType:
+  - code
+  - description
+  - get
+models.address:
+  XBee16BitAddress:
+  - from_hex_string
+  - from_bytes
+  - is_valid
+  - is_known_node_addr
+  - get_hsb
+  - get_lsb
+  - address
+  XBee64BitAddress:
+  - from_hex_string
+  - from_bytes
+  - is_valid
+  - is_known_node_addr
+  - address
+  XBeeIMEIAddress:
+  - from_string
+  - is_valid
+  - address
+models.atcomm:
+  ATCommand:
+  - command
+  - parameter
+  - get_parameter_string
+  - parameter
+  ATCommandResponse:
+  - command
+  - response
+  - status
+  ATStringCommand:
+  - command
+  - description
+  SpecialByte:
+  - code
+  - get
+  - escape
+  - is_special_byte
+models.filesystem:
+  CloseDirCmdRequest:
+  - create_cmd
+  CloseDirCmdResponse:
+  - create_cmd
+  CloseFileCmdRequest:
+  - create_cmd
+  CloseFileCmdResponse:
+  - create_cmd
+  CreateDirCmdRequest:
+  - create_cmd
+  CreateDirCmdResponse:
+  - create_cmd
+  DeleteCmdRequest:
+  - create_cmd
+  DeleteCmdResponse:
+  - create_cmd
+  FSCmd:
+  - type
+  - direction
+  - status
+  - status_value
+  - output
+  - to_dict
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  FSCmdType:
+  - code
+  - description
+  - get
+  FileIdCmd:
+  - fs_id
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  FileIdNameCmd:
+  - name
+  - create_cmd
+  - _get_name_max_len
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  GetPathIdCmdRequest:
+  - create_cmd
+  GetPathIdCmdResponse:
+  - full_path
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  HashFileCmdRequest:
+  - create_cmd
+  HashFileCmdResponse:
+  - file_hash
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  OpenDirCmdRequest:
+  - create_cmd
+  OpenDirCmdResponse:
+  - is_last
+  - fs_entries
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  OpenFileCmdRequest:
+  - options
+  - create_cmd
+  - _get_name_max_len
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  OpenFileCmdResponse:
+  - size
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  ReadDirCmdRequest:
+  - create_cmd
+  ReadDirCmdResponse:
+  - create_cmd
+  ReadFileCmdRequest:
+  - offset
+  - size
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  ReadFileCmdResponse:
+  - offset
+  - data
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  RenameCmdRequest:
+  - new_name
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  RenameCmdResponse:
+  - create_cmd
+  UnknownFSCmd:
+  - type
+  - create_cmd
+  - output
+  - to_dict
+  - _get_spec_data
+  VolFormatCmdRequest:
+  - create_cmd
+  VolFormatCmdResponse:
+  - create_cmd
+  VolStatCmdRequest:
+  - name
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  VolStatCmdResponse:
+  - bytes_used
+  - bytes_free
+  - bytes_bad
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  WriteFileCmdRequest:
+  - offset
+  - data
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+  WriteFileCmdResponse:
+  - actual_offset
+  - create_cmd
+  - _get_min_len
+  - _get_spec_data
+  - _get_spec_data_dict
+models.hw:
+  HardwareVersion:
+  - code
+  - description
+  - get
+  LegacyHardwareVersion:
+  - code
+  - letter
+  - get_by_letter
+models.info:
+  SocketInfo:
+  - create_socket_info
+  - parse_socket_list
+  - socket_id
+  - state
+  - protocol
+  - local_port
+  - remote_port
+  - remote_address
+models.message:
+  ExplicitXBeeMessage:
+  - source_endpoint
+  - dest_endpoint
+  - cluster_id
+  - profile_id
+  - source_endpoint
+  - dest_endpoint
+  - cluster_id
+  - profile_id
+  - to_dict
+  IPMessage:
+  - ip_addr
+  - source_port
+  - dest_port
+  - protocol
+  - data
+  - to_dict
+  SMSMessage:
+  - phone_number
+  - data
+  - to_dict
+  UserDataRelayMessage:
+  - local_interface
+  - data
+  - to_dict
+  XBeeMessage:
+  - data
+  - remote_device
+  - is_broadcast
+  - timestamp
+  - to_dict
+models.mode:
+  APIOutputMode:
+  - code
+  - description
+  - get
+  APIOutputModeBit:
+  - code
+  - description
+  - get
+  - calculate_api_output_mode_value
+  IPAddressingMode:
+  - code
+  - description
+  - get
+  NeighborDiscoveryMode:
+  - code
+  - description
+  - get
+  OperatingMode:
+  - code
+  - description
+  - get
+models.options:
+  DirResponseFlag: []
+  DiscoveryOptions:
+  - code
+  - description
+  - get
+  - calculate_discovery_value
+  FileOpenRequestOption: []
+  ReceiveOptions: []
+  RegisterKeyOptions:
+  - code
+  - description
+  - get
+  RemoteATCmdOptions: []
+  SendDataRequestOptions:
+  - code
+  - description
+  - get
+  SocketOption:
+  - code
+  - description
+  - get
+  TransmitOptions: []
+  XBeeLocalInterface:
+  - code
+  - description
+  - get
+models.protocol:
+  IPProtocol:
+  - code
+  - description
+  - get
+  - get_by_description
+  Role:
+  - id
+  - description
+  - get
+  XBeeProtocol:
+  - code
+  - description
+  - get
+  - is_ip_protocol
+  - determine_protocol
+models.status:
+  ATCommandStatus:
+  - code
+  - description
+  - get
+  AssociationIndicationStatus:
+  - code
+  - description
+  - get
+  CellularAssociationIndicationStatus:
+  - code
+  - description
+  - get
+  DeviceCloudStatus:
+  - code
+  - description
+  - get
+  DiscoveryStatus:
+  - code
+  - description
+  - get
+  EmberBootloaderMessageType:
+  - code
+  - description
+  - get
+  FSCommandStatus:
+  - code
+  - description
+  - get
+  FrameError:
+  - code
+  - description
+  - get
+  ModemStatus:
+  - code
+  - description
+  - get
+  NetworkDiscoveryStatus:
+  - code
+  - description
+  - get
+  NodeUpdateType:
+  - code
+  - desc
+  PowerLevel:
+  - code
+  - description
+  - get
+  SocketInfoState:
+  - code
+  - description
+  - get
+  - get_by_description
+  SocketState:
+  - code
+  - description
+  - get
+  SocketStatus:
+  - code
+  - description
+  - get
+  TransmitStatus:
+  - code
+  - description
+  - get
+  UpdateProgressStatus:
+  - type
+  - task
+  - percent
+  - finished
+  WiFiAssociationIndicationStatus:
+  - code
+  - description
+  - get
+  ZigbeeRegisterStatus:
+  - code
+  - description
+  - get
+models.zdo:
+  Neighbor:
+  - node
+  - relationship
+  - depth
+  - lq
+  NeighborFinder:
+  - running
+  - error
+  - stop
+  - get_neighbors
+  NeighborRelationship:
+  - id
+  - name
+  - get
+  NeighborTableReader:
+  - get_neighbor_table
+  - _init_variables
+  - _is_broadcast
+  - _get_zdo_command_data
+  - _parse_data
+  - _perform_finish_actions
+  - _notify_process_finished
+  NodeDescriptor:
+  - role
+  - complex_desc_supported
+  - user_desc_supported
+  - freq_band
+  - mac_capabilities
+  - manufacturer_code
+  - max_buffer_size
+  - max_in_transfer_size
+  - max_out_transfer_size
+  - desc_capabilities
+  NodeDescriptorReader:
+  - get_node_descriptor
+  - _init_variables
+  - _is_broadcast
+  - _get_zdo_command_data
+  - _parse_data
+  - _perform_finish_actions
+  Route:
+  - destination
+  - next_hop
+  - status
+  - is_low_memory
+  - is_many_to_one
+  - is_route_record_required
+  RouteStatus:
+  - id
+  - name
+  - get
+  RouteTableReader:
+  - get_route_table
+  - _init_variables
+  - _is_broadcast
+  - _get_zdo_command_data
+  - _parse_data
+  - _perform_finish_actions
+  - _notify_process_finished
+  _ZDOCommand:
+  - running
+  - error
+  - stop
+  - _start_process
+  - _send_zdo
+  - _init_variables
+  - _is_broadcast
+  - _get_zdo_command_data
+  - _parse_data
+  - _perform_finish_actions
+  - _notify_process_finished
+  - _generate_zdo_packet
+  - _zdo_packet_cb
+packets.__init__: {}
+packets.aft:
+  ApiFrameType:
+  - code
+  - description
+  - get
+packets.base:
+  DictKeys: []
+  GenericXBeePacket:
+  - create_packet
+  - _get_api_packet_spec_data
+  - needs_id
+  - _get_api_packet_spec_data_dict
+  UnknownXBeePacket:
+  - create_packet
+  - _get_api_packet_spec_data
+  - needs_id
+  - _get_api_packet_spec_data_dict
+  XBeeAPIPacket:
+  - get_frame_spec_data
+  - get_frame_type
+  - get_frame_type_value
+  - _get_frame_spec_data_dict
+  - is_broadcast
+  - frame_id
+  - frame_id
+  - _check_api_packet
+  - _get_api_packet_spec_data
+  - needs_id
+  - _get_api_packet_spec_data_dict
+  XBeePacket:
+  - op_mode
+  - get_checksum
+  - output
+  - to_dict
+  - create_packet
+  - get_frame_spec_data
+  - _get_frame_spec_data_dict
+  - _escape_data
+  - unescape_data
+packets.cellular:
+  RXSMSPacket:
+  - create_packet
+  - needs_id
+  - get_phone_number_byte_array
+  - phone_number
+  - phone_number
+  - data
+  - data
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  TXSMSPacket:
+  - create_packet
+  - needs_id
+  - get_phone_number_byte_array
+  - phone_number
+  - phone_number
+  - data
+  - data
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+packets.common:
+  ATCommPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - command
+  - command
+  - parameter
+  - parameter
+  ATCommQueuePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - command
+  - command
+  - parameter
+  - parameter
+  ATCommResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - command
+  - command
+  - command_value
+  - command_value
+  - status
+  - real_status
+  - status
+  ExplicitAddressingPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - source_endpoint
+  - source_endpoint
+  - dest_endpoint
+  - dest_endpoint
+  - cluster_id
+  - cluster_id
+  - profile_id
+  - profile_id
+  - rf_data
+  - rf_data
+  - transmit_options
+  - transmit_options
+  - broadcast_radius
+  - broadcast_radius
+  - x64bit_dest_addr
+  - x64bit_dest_addr
+  - x16bit_dest_addr
+  - x16bit_dest_addr
+  ExplicitRXIndicatorPacket:
+  - create_packet
+  - needs_id
+  - is_broadcast
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - x16bit_source_addr
+  - x16bit_source_addr
+  - source_endpoint
+  - source_endpoint
+  - dest_endpoint
+  - dest_endpoint
+  - cluster_id
+  - cluster_id
+  - profile_id
+  - profile_id
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  - _decode_at_cmd
+  - _encode_at_cmd
+  IODataSampleRxIndicatorPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - is_broadcast
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - x16bit_source_addr
+  - x16bit_source_addr
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  - io_sample
+  - io_sample
+  ModemStatusPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - modem_status
+  - modem_status
+  ReceivePacket:
+  - create_packet
+  - needs_id
+  - is_broadcast
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - x16bit_source_addr
+  - x16bit_source_addr
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  RemoteATCommandPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_dest_addr
+  - x64bit_dest_addr
+  - x16bit_dest_addr
+  - x16bit_dest_addr
+  - transmit_options
+  - transmit_options
+  - parameter
+  - parameter
+  - command
+  - command
+  RemoteATCommandResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - command
+  - command
+  - command_value
+  - command_value
+  - status
+  - real_status
+  - status
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - x16bit_source_addr
+  - x16bit_source_addr
+  TransmitPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - rf_data
+  - rf_data
+  - transmit_options
+  - transmit_options
+  - broadcast_radius
+  - broadcast_radius
+  - x64bit_dest_addr
+  - x64bit_dest_addr
+  - x16bit_dest_addr
+  - x16bit_dest_addr
+  TransmitStatusPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x16bit_dest_addr
+  - x16bit_dest_addr
+  - transmit_status
+  - transmit_status
+  - transmit_retry_count
+  - transmit_retry_count
+  - discovery_status
+  - discovery_status
+packets.devicecloud:
+  DeviceRequestPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - request_id
+  - request_id
+  - transport
+  - flags
+  - target
+  - target
+  - request_data
+  - request_data
+  DeviceResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - request_id
+  - request_id
+  - request_data
+  - request_data
+  DeviceResponseStatusPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - status
+  - status
+  FrameErrorPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - error
+  - error
+  SendDataRequestPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - path
+  - path
+  - content_type
+  - content_type
+  - options
+  - options
+  - file_data
+  - file_data
+  SendDataResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - status
+  - status
+packets.digimesh:
+  RouteInformationPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - src_event
+  - src_event
+  - length
+  - timestamp
+  - timestamp
+  - ack_timeout_count
+  - ack_timeout_count
+  - tx_block_count
+  - tx_block_count
+  - dst_addr
+  - dst_addr
+  - src_addr
+  - src_addr
+  - responder_addr
+  - responder_addr
+  - successor_addr
+  - successor_addr
+packets.factory: {}
+packets.filesystem:
+  FSRequestPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - command
+  - command
+  FSResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - command
+  - command
+  RemoteFSRequestPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_dest_addr
+  - x64bit_dest_addr
+  - command
+  - command
+  - transmit_options
+  - transmit_options
+  RemoteFSResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - command
+  - command
+  - receive_options
+  - receive_options
+  - build_fs_command
+packets.network:
+  RXIPv4Packet:
+  - create_packet
+  - needs_id
+  - source_address
+  - source_address
+  - dest_port
+  - dest_port
+  - source_port
+  - source_port
+  - ip_protocol
+  - ip_protocol
+  - data
+  - data
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  TXIPv4Packet:
+  - create_packet
+  - needs_id
+  - dest_address
+  - dest_address
+  - dest_port
+  - dest_port
+  - source_port
+  - source_port
+  - ip_protocol
+  - ip_protocol
+  - transmit_options
+  - transmit_options
+  - data
+  - data
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+packets.raw:
+  RX16IOPacket:
+  - create_packet
+  - needs_id
+  - is_broadcast
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x16bit_source_addr
+  - x16bit_source_addr
+  - rssi
+  - rssi
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  - io_sample
+  - io_sample
+  RX16Packet:
+  - create_packet
+  - needs_id
+  - is_broadcast
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x16bit_source_addr
+  - x16bit_source_addr
+  - rssi
+  - rssi
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  RX64IOPacket:
+  - create_packet
+  - needs_id
+  - is_broadcast
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - rssi
+  - rssi
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  - io_sample
+  - io_sample
+  RX64Packet:
+  - create_packet
+  - needs_id
+  - is_broadcast
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - rssi
+  - rssi
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  TX16Packet:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x16bit_dest_addr
+  - x16bit_dest_addr
+  - transmit_options
+  - transmit_options
+  - rf_data
+  - rf_data
+  TX64Packet:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_dest_addr
+  - x64bit_dest_addr
+  - transmit_options
+  - transmit_options
+  - rf_data
+  - rf_data
+  TXStatusPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - transmit_status
+  - transmit_status
+packets.relay:
+  UserDataRelayOutputPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - data
+  - data
+  - src_interface
+  - src_interface
+  UserDataRelayPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - data
+  - data
+  - dest_interface
+  - dest_interface
+packets.socket:
+  SocketBindListenPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - source_port
+  - source_port
+  SocketClosePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  SocketCloseResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - status
+  - status
+  SocketConnectPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - dest_port
+  - dest_port
+  - dest_address_type
+  - dest_address_type
+  - dest_address
+  - dest_address
+  SocketConnectResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - status
+  - status
+  SocketCreatePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - protocol
+  - protocol
+  SocketCreateResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - status
+  - status
+  SocketListenResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - status
+  - status
+  SocketNewIPv4ClientPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - client_socket_id
+  - client_socket_id
+  - remote_address
+  - remote_address
+  - remote_port
+  - remote_port
+  SocketOptionRequestPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - option
+  - option
+  - option_data
+  - option_data
+  SocketOptionResponsePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - option
+  - option
+  - status
+  - status
+  - option_data
+  - option_data
+  SocketReceiveFromPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - source_address
+  - source_address
+  - source_port
+  - source_port
+  - payload
+  - payload
+  SocketReceivePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - payload
+  - payload
+  SocketSendPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - payload
+  - payload
+  SocketSendToPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - dest_address
+  - dest_address
+  - dest_port
+  - dest_port
+  - payload
+  - payload
+  SocketStatePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - socket_id
+  - socket_id
+  - state
+  - state
+packets.wifi:
+  IODataSampleRxIndicatorWifiPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - source_address
+  - source_address
+  - rssi
+  - rssi
+  - receive_options
+  - receive_options
+  - rf_data
+  - rf_data
+  - io_sample
+  - io_sample
+  RemoteATCommandResponseWifiPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - source_address
+  - source_address
+  - command
+  - command
+  - status
+  - status
+  - command_value
+  - command_value
+  RemoteATCommandWifiPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - dest_address
+  - dest_address
+  - transmit_options
+  - transmit_options
+  - command
+  - command
+  - parameter
+  - parameter
+packets.zigbee:
+  CreateSourceRoutePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_dest_addr
+  - x64bit_dest_addr
+  - x16bit_dest_addr
+  - x16bit_dest_addr
+  - route_cmd_options
+  - route_cmd_options
+  - number_of_hops
+  - hops
+  - hops
+  OTAFirmwareUpdateStatusPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - x16bit_updater_addr
+  - x16bit_updater_addr
+  - receive_options
+  - receive_options
+  - bootloader_msg_type
+  - bootloader_msg_type
+  - block_number
+  - block_number
+  - x64bit_target_addr
+  - x64bit_target_addr
+  RegisterDeviceStatusPacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - status
+  - status
+  RegisterJoiningDevicePacket:
+  - create_packet
+  - needs_id
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - registrant_address
+  - registrant_address
+  - options
+  - options
+  - key
+  - key
+  RouteRecordIndicatorPacket:
+  - create_packet
+  - needs_id
+  - is_broadcast
+  - _get_api_packet_spec_data
+  - _get_api_packet_spec_data_dict
+  - x64bit_source_addr
+  - x64bit_source_addr
+  - x16bit_source_addr
+  - x16bit_source_addr
+  - receive_options
+  - receive_options
+  - number_of_hops
+  - hops
+  - hops
+profile:
+  FirmwareBaudrate:
+  - get
+  - get_by_baudrate
+  - index
+  - baudrate
+  FirmwareParity:
+  - get
+  - get_by_parity
+  - index
+  - parity
+  FirmwareStopbits:
+  - get
+  - get_by_stopbits
+  - index
+  - stop_bits
+  FlashFirmwareOption:
+  - get
+  - code
+  - description
+  ProfileUpdateTask:
+  - xbee
+  - profile_path
+  - timeout
+  - callback
+  ReadProfileException: []
+  UpdateProfileException: []
+  XBeeProfile:
+  - open
+  - close
+  - is_open
+  - get_setting_default_value
+  - _parse_xml_profile_file
+  - _initialize_profile
+  - _check_profile_integrity
+  - _parse_xml_firmware_file
+  - _throw_read_exception
+  - profile_file
+  - version
+  - flash_firmware_option
+  - description
+  - reset_settings
+  - has_local_filesystem
+  - has_remote_filesystem
+  - has_filesystem
+  - has_local_firmware_files
+  - has_remote_firmware_files
+  - has_firmware_files
+  - profile_settings
+  - firmware_version
+  - hardware_version
+  - compatibility_number
+  - region_lock
+  - profile_description_file
+  - firmware_description_file
+  - file_system_path
+  - remote_file_system_image
+  - bootloader_file
+  - protocol
+  - protocol
+  XBeeProfileSetting:
+  - _setting_value_to_bytearray
+  - name
+  - type
+  - format
+  - value
+  - bytearray_value
+  XBeeSettingFormat:
+  - get
+  - tag
+  - description
+  XBeeSettingType:
+  - get
+  - tag
+  - description
+  _ProfileUpdater:
+  - _notify_progress
+  - _update_firmware
+  - _check_port_settings_changed
+  - _check_protocol_changed_by_fw
+  - _check_protocol_changed_by_settings
+  - _update_device_settings
+  - _update_file_system
+  - _legacy_update_file_system
+  - _should_update_fw
+  - read_device_parameters
+  - read_parameter_with_retries
+  - set_parameter_with_retries
+  - update_profile
+  - apply_xbee_profile
+  _UpdateConfigurer:
+  - cmd_dict
+  - prepare_for_update
+  - restore_after_update
+reader:
+  BluetoothDataReceived: []
+  DataReceived: []
+  DeviceDiscovered: []
+  DiscoveryProcessFinished: []
+  EndDiscoveryScan: []
+  ExplicitDataReceived: []
+  FileSystemFrameReceived: []
+  IOSampleReceived: []
+  IPDataReceived: []
+  InitDiscoveryScan: []
+  MicroPythonDataReceived: []
+  ModemStatusReceived: []
+  NetworkModified: []
+  NetworkUpdateProgress: []
+  PacketListener:
+  - wait_until_started
+  - run
+  - stop
+  - is_running
+  - get_queue
+  - get_data_queue
+  - get_explicit_queue
+  - get_ip_queue
+  - add_packet_received_callback
+  - add_packet_received_from_callback
+  - add_data_received_callback
+  - add_modem_status_received_callback
+  - add_io_sample_received_callback
+  - add_explicit_data_received_callback
+  - add_ip_data_received_callback
+  - add_sms_received_callback
+  - add_user_data_relay_received_callback
+  - add_bluetooth_data_received_callback
+  - add_micropython_data_received_callback
+  - add_socket_state_received_callback
+  - add_socket_data_received_callback
+  - add_socket_data_received_from_callback
+  - add_route_record_received_callback
+  - add_route_info_received_callback
+  - add_fs_frame_received_callback
+  - del_packet_received_callback
+  - del_packet_received_from_callback
+  - del_data_received_callback
+  - del_modem_status_received_callback
+  - del_io_sample_received_callback
+  - del_explicit_data_received_callback
+  - del_ip_data_received_callback
+  - del_sms_received_callback
+  - del_user_data_relay_received_callback
+  - del_bluetooth_data_received_callback
+  - del_micropython_data_received_callback
+  - del_socket_state_received_callback
+  - del_socket_data_received_callback
+  - del_socket_data_received_from_callback
+  - del_route_record_received_callback
+  - del_route_info_callback
+  - del_fs_frame_received_callback
+  - get_packet_received_callbacks
+  - get_packet_received_from_callbacks
+  - get_data_received_callbacks
+  - get_modem_status_received_callbacks
+  - get_io_sample_received_callbacks
+  - get_explicit_data_received_callbacks
+  - get_ip_data_received_callbacks
+  - get_sms_received_callbacks
+  - get_user_data_relay_received_callbacks
+  - get_bluetooth_data_received_callbacks
+  - get_micropython_data_received_callbacks
+  - get_socket_state_received_callbacks
+  - get_socket_data_received_callbacks
+  - get_socket_data_received_from_callbacks
+  - get_route_record_received_callbacks
+  - get_route_info_callbacks
+  - get_fs_frame_received_callbacks
+  PacketReceived: []
+  PacketReceivedFrom: []
+  RelayDataReceived: []
+  RouteInformationReceived: []
+  RouteReceived: []
+  RouteRecordIndicatorReceived: []
+  SMSReceived: []
+  SocketDataReceived: []
+  SocketDataReceivedFrom: []
+  SocketStateReceived: []
+  XBeeEvent: []
+  XBeeQueue:
+  - get
+  - get_by_remote
+  - get_by_ip
+  - get_by_id
+  - flush
+recovery:
+  _LocalRecoverDevice:
+  - autorecover_device
+  - _try_baudrate
+  - _get_recovery_baudrate
+  - _enter_in_recovery
+  - _do_exception
+  - _restore_target_connection
+  - recover_device
+  - enter_at_command_mode
+sender:
+  PacketSender:
+  - send_packet
+  - is_op_mode_valid
+  - at_response_received_cb
+  - _refresh_if_cached
+  - _refresh_serial_params
+  SyncRequestSender:
+  - send
+  - xbee
+  - packet
+  - timeout
+  - _packet_received_cb
+  - _is_valid_at_response
+  - _is_valid_remote_at_response
+  - _is_valid_fs_response
+  - _is_valid_remote_fs_response
+  - _is_valid_socket_opt_response
+  - _is_valid_socket_conn_response
+  - _is_valid_socket_close_response
+  - _is_valid_socket_bind_response
+serial:
+  FlowControl: []
+  XBeeSerialPort:
+  - is_interface_open
+  - write_frame
+  - read_byte
+  - read_bytes
+  - quit_reading
+  - wait_for_frame
+  - read_existing
+  - get_read_timeout
+  - set_read_timeout
+  - set_baudrate
+  - purge_port
+util.__init__: {}
+util.exportutils: {}
+util.utils: {}
+util.xmodem:
+  XModemCancelException: []
+  XModemException: []
+  _DownloadFile:
+  - write_data_chunk
+  - close_file
+  - num_chunks
+  - chunk_index
+  - size
+  - size
+  - name
+  - name
+  - percent
+  _TransferFile:
+  - get_next_data_chunk
+  - num_chunks
+  - chunk_index
+  - percent
+  _XModemMode:
+  - block_size
+  - eof_pad
+  _XModemReadSession:
+  - _send_data_with_retries
+  - _send_verification_char
+  - _send_ack
+  - _send_nak
+  - _purge
+  - _read_packet
+  - _read_block_0
+  - get_file
+  - _calculate_crc16_ccitt
+  - _calculate_checksum
+  - _get_milliseconds
+  - send_file_xmodem
+  - send_file_ymodem
+  - get_file_ymodem
+  _XModemTransferSession:
+  - _read_verification_mode
+  - _send_block_0
+  - _send_empty_block_0
+  - _send_next_block
+  - _send_eot
+  - transfer_file
+  _XModemVerificationMode:
+  - identifier
+  - length
+  - byte
+xsocket:
+  socket:
+  - connect
+  - bind
+  - listen
+  - accept
+  - gettimeout
+  - settimeout
+  - getblocking
+  - setblocking
+  - recv
+  - recvfrom
+  - send
+  - sendall
+  - sendto
+  - close
+  - setsocketopt
+  - getsocketopt
+  - add_socket_state_callback
+  - del_socket_state_callback
+  - get_sock_info
+  - is_connected

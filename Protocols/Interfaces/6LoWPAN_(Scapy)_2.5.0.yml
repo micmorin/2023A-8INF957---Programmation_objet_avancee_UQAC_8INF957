@@ -1,0 +1,49 @@
+sixlowpan:
+  IP6FieldLenField:
+  - addfield
+  - getfield
+  LoWPANBroadcast:
+  - source_addr_size
+  - dest_addr_size
+  - _extract_upperaddress
+  LoWPANFragmentationFirst: []
+  LoWPANFragmentationSubsequent: []
+  LoWPANMesh: []
+  LoWPANUncompressedIPv6:
+  - default_payload_class
+  LoWPAN_HC1:
+  - post_dissect
+  - decompressSourceAddr
+  - decompressDestAddr
+  - do_build
+  - do_build_payload
+  LoWPAN_HC2_UDP:
+  - default_payload_class
+  - _get_hc1_pad
+  LoWPAN_IPHC:
+  - post_dissect
+  - decompressDestAddr
+  - compressSourceAddr
+  - compressDestAddr
+  - decompressSourceAddr
+  - guess_payload_class
+  - do_build
+  - do_build_payload
+  - _getTrafficClassAndFlowLabel
+  LoWPAN_NHC:
+  - post_dissect
+  - do_build
+  - do_build_payload
+  - guess_payload_class
+  LoWPAN_NHC_Hdr:
+  - get_next_cls
+  - dispatch_hook
+  - extract_padding
+  LoWPAN_NHC_IPv6Ext:
+  - post_build
+  LoWPAN_NHC_UDP: []
+  SixLoWPAN:
+  - dispatch_hook
+  - sixlowpan_fragment
+  - sixlowpan_defragment
+  SixLoWPAN_ESC: []
